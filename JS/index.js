@@ -1,5 +1,12 @@
-/*Using the two node.js fs functions: readFile and readFileSync
-Add a text file to be used for reading 
-Console log the output
-Code Tip: https://github.com/anmarjarjees/node.js-start/blob/main/index4.js*/
+const fs = require('fs');
+
+// Using readFileSync
+const fileContentSync = fs.readFileSync('../LAB/test.txt', 'utf-8');
+console.log(fileContentSync);
+
+// Using readFile
+fs.readFile('../LAB/test.txt', 'utf-8', (err, fileContent) => {
+    if (err) throw err;
+    console.log(fileContent);
+});
 
